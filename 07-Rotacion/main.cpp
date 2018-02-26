@@ -4,11 +4,6 @@
 
 bool* keyStates = new bool[256];
 
-bool movingUp = false;
-float yLocation = 0.0f;
-
-float yRotationAngle = 0.0f;
-
 void renderPrimitiveQuad()
 {
 	glBegin(GL_QUADS);
@@ -57,30 +52,28 @@ void display(void)
 {
    glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
    glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
+   glMatrixMode(GL_MODELVIEW);
    glLoadIdentity();
    glColor3f(0.0f, 0.0f, 1.0f);
-   glTranslatef(0.0f, 0.0f, -5.0f);
-   glTranslatef(0.0f, yLocation, 0.0f);
-   glRotatef(yRotationAngle, 0.0f, 1.0f, 0.0f);
-   if (movingUp)
-	   yLocation -= 0.005f;
-   else
-	   yLocation += 0.005f;
-
-   if (yLocation < -3.0f)
-	   movingUp = false;
-   else if (yLocation > 3.0f)
-	   movingUp = true;
-
-   yRotationAngle += 0.005f;
-
-   if (yRotationAngle > 360.0f)
-	   yRotationAngle -= 360.0f;
+   glRotatef(10.0f, 0.0f, 1.0f, 0.0f);
+   float m[16];
+   glGetFloatv(GL_MODELVIEW_MATRIX, m);
+   printf("Matrix model view\n");
+   printf("%f\t%f\t%f\t%f\n", m[0], m[4], m[8], m[12]);
+   printf("%f\t%f\t%f\t%f\n", m[1], m[5], m[9], m[13]);
+   printf("%f\t%f\t%f\t%f\n", m[2], m[6], m[10], m[14]);
+   printf("%f\t%f\t%f\t%f\n", m[3], m[7], m[11], m[15]);
+   
    renderPrimitiveQuad();
    // renderPrimitivePoints();
    // renderPrimitiveLineLoop();
    // renderPrimitiveTriangle();
    glFlush ();
+}
+
+void idleFunc(void)
+{
+	glutPostRedisplay();
 }
 
 void reshape(int width, int height) {
@@ -145,7 +138,7 @@ int main(int argc, char** argv)
    glutCreateWindow ("Teclado");
    init();
    glutDisplayFunc(display);
-   glutIdleFunc(display);
+   glutIdleFunc(idleFunc);
    glutKeyboardFunc(keyboard);
    glutKeyboardFunc(keyUp);
    glutReshapeFunc(reshape);

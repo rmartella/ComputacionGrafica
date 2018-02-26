@@ -26,6 +26,7 @@
     <ProjectGuid>{4a5c2e4b-36d9-410b-9950-4d735ca18422}</ProjectGuid>
     <RootNamespace>_07_Transformaciones</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>07-Rotacion</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

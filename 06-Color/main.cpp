@@ -59,6 +59,11 @@ void display(void)
    glFlush ();
 }
 
+void idleFunc(void)
+{
+	glutPostRedisplay();
+}
+
 void reshape(int width, int height) {
 	glViewport(0, 0, (GLsizei)width, (GLsizei)height);
 	glMatrixMode(GL_PROJECTION);
@@ -115,7 +120,8 @@ int main(int argc, char** argv)
    glutInitWindowPosition (100, 100);
    glutCreateWindow ("Teclado");
    init();
-   glutDisplayFunc(display); 
+   glutDisplayFunc(display);
+   glutIdleFunc(idleFunc);
    glutKeyboardFunc(keyboard);
    glutReshapeFunc(reshape);
    glutMouseFunc(mouseFunc);

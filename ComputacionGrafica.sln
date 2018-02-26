@@ -15,7 +15,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05-Mouse", "05-Mouse\05-Mou
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06-Color", "06-Color\06-Color.vcxproj", "{1F9CFFFE-3D47-446B-8C1A-DF223A0811CE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07-Transformaciones", "07-Transformaciones\07-Transformaciones.vcxproj", "{4A5C2E4B-36D9-410B-9950-4D735CA18422}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07-Rotacion", "07-Rotacion\07-Rotacion.vcxproj", "{4A5C2E4B-36D9-410B-9950-4D735CA18422}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
