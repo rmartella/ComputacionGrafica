@@ -1,5 +1,4 @@
 #include <GL\glut.h>
-#include <stdlib.h>
 
 void init(void) 
 {

@@ -1,5 +1,4 @@
 #include <GL\glut.h>
-#include <stdlib.h>
 #include <stdio.h>
 
 bool* keyStates = new bool[256];
