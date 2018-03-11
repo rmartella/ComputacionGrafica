@@ -139,7 +139,7 @@ int main(int argc, char** argv)
    glutDisplayFunc(display);
    glutIdleFunc(idleFunc);
    glutKeyboardFunc(keyboard);
-   glutKeyboardFunc(keyUp);
+   glutKeyboardUpFunc(keyUp);
    glutReshapeFunc(reshape);
    glutMouseFunc(mouseFunc);
    glutMotionFunc(motionFunc);
