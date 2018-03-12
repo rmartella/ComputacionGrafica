@@ -19,6 +19,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07-Rotacion", "07-Rotacion\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08-Transformaciones", "08-Transformaciones\08-Transformaciones.vcxproj", "{CA5A06CD-3BBD-430E-BE7C-A71F55788126}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09-Proyecciones", "09-Proyecciones\09-Proyecciones.vcxproj", "{30FE3562-B660-4E91-B90B-A80A4B0D7E23}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10-ModeladoMano", "10-ModeladoMano\10-ModeladoMano.vcxproj", "{77814CA9-441A-40D9-82F3-BEB314171DC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +95,22 @@ Global
 		{CA5A06CD-3BBD-430E-BE7C-A71F55788126}.Release|x64.Build.0 = Release|x64
 		{CA5A06CD-3BBD-430E-BE7C-A71F55788126}.Release|x86.ActiveCfg = Release|Win32
 		{CA5A06CD-3BBD-430E-BE7C-A71F55788126}.Release|x86.Build.0 = Release|Win32
+		{30FE3562-B660-4E91-B90B-A80A4B0D7E23}.Debug|x64.ActiveCfg = Debug|x64
+		{30FE3562-B660-4E91-B90B-A80A4B0D7E23}.Debug|x64.Build.0 = Debug|x64
+		{30FE3562-B660-4E91-B90B-A80A4B0D7E23}.Debug|x86.ActiveCfg = Debug|Win32
+		{30FE3562-B660-4E91-B90B-A80A4B0D7E23}.Debug|x86.Build.0 = Debug|Win32
+		{30FE3562-B660-4E91-B90B-A80A4B0D7E23}.Release|x64.ActiveCfg = Release|x64
+		{30FE3562-B660-4E91-B90B-A80A4B0D7E23}.Release|x64.Build.0 = Release|x64
+		{30FE3562-B660-4E91-B90B-A80A4B0D7E23}.Release|x86.ActiveCfg = Release|Win32
+		{30FE3562-B660-4E91-B90B-A80A4B0D7E23}.Release|x86.Build.0 = Release|Win32
+		{77814CA9-441A-40D9-82F3-BEB314171DC5}.Debug|x64.ActiveCfg = Debug|x64
+		{77814CA9-441A-40D9-82F3-BEB314171DC5}.Debug|x64.Build.0 = Debug|x64
+		{77814CA9-441A-40D9-82F3-BEB314171DC5}.Debug|x86.ActiveCfg = Debug|Win32
+		{77814CA9-441A-40D9-82F3-BEB314171DC5}.Debug|x86.Build.0 = Debug|Win32
+		{77814CA9-441A-40D9-82F3-BEB314171DC5}.Release|x64.ActiveCfg = Release|x64
+		{77814CA9-441A-40D9-82F3-BEB314171DC5}.Release|x64.Build.0 = Release|x64
+		{77814CA9-441A-40D9-82F3-BEB314171DC5}.Release|x86.ActiveCfg = Release|Win32
+		{77814CA9-441A-40D9-82F3-BEB314171DC5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
