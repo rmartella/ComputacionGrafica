@@ -2,9 +2,15 @@
 #include <math.h>
 #include <stdio.h>
 
+#include "CamaraFPS.h"
+
 #define PI 3.14159
 
 bool* keyStates = new bool[256];
+
+CamaraFPS camara;
+
+float lastX = 0.0, lastY = 0.0;
 
 float ** CreaMatriz(int x, int y)
 {
@@ -31,7 +37,7 @@ void renderGrid(float sizecell, int numcells) {
 void renderGrid2(float sizecell, int numcells) {
 	for (int i = -numcells; i < numcells; i++)
 		for (int j = -numcells; j < numcells; j++){
-			glBegin(GL_LINE_LOOP);
+			glBegin(GL_QUADS);
 			float rrand = rand() % 255;
 			rrand = rrand / 255;
 			glColor3f(rrand, rrand, rrand);
@@ -312,9 +318,8 @@ void display(void)
 {
    glClear (GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
    glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
-   glMatrixMode(GL_MODELVIEW);
-   glLoadIdentity();
-   glTranslatef(0, 0, -60);
+   camara.setViewMatrix();
+   glTranslatef(0, 0, 0);
    glColor3f(0, 0, 1.0);
    
    // renderCono(20, 1.0, 2.0, true);
@@ -369,6 +374,23 @@ void keyboard(unsigned char key, int x, int y)
 	}
 }
 
+void specialFunc(int key, int x, int y) {
+	switch (key) {
+	case GLUT_KEY_UP:
+		camara.ProcessKeyboard(Camera_Movement::C_FORWARD, 1.0);
+	break;
+	case GLUT_KEY_DOWN:
+		camara.ProcessKeyboard(Camera_Movement::C_BACKWARD, 1.0);
+		break;
+	case GLUT_KEY_LEFT:
+		camara.ProcessKeyboard(Camera_Movement::C_LEFT, 1.0);
+		break;
+	case GLUT_KEY_RIGHT:
+		camara.ProcessKeyboard(Camera_Movement::C_RIGHT, 1.0);
+		break;
+	}
+}
+
 void keyUp(unsigned char key, int x, int y) {
 	keyStates[key] = false;
 }
@@ -380,12 +402,19 @@ void mouseFunc(int button, int state, int x, int y)
 
 void motionFunc(int x, int y)
 {
+	float xoffset = lastX - x;
+	float yoffset = lastY - y;
 	printf("Mouse Motion func %d, %d\n", x, y);
+	camara.ProcessMouseMovement(-xoffset, yoffset, false);
+	lastX = x;
+	lastY = y;
 }
 
 void passiveMotionFunc(int x, int y)
 {
 	printf("Passive Mouse motion func %d, %d\n", x, y);
+	lastX = x;
+	lastY = y;
 }
 
 int main(int argc, char** argv)
@@ -400,6 +429,7 @@ int main(int argc, char** argv)
    glutIdleFunc(idleFunc);
    glutKeyboardFunc(keyboard);
    glutKeyboardUpFunc(keyUp);
+   glutSpecialFunc(specialFunc);
    glutReshapeFunc(reshape);
    glutMouseFunc(mouseFunc);
    glutMotionFunc(motionFunc);
