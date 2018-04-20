@@ -459,7 +459,7 @@ void motionFunc(int x, int y)
 	float xoffset = lastX - x;
 	float yoffset = lastY - y;
 	printf("Mouse Motion func %d, %d\n", x, y);
-	camara.ProcessMouseMovement(-xoffset, yoffset, false);
+	camara.ProcessMouseMovement(-xoffset, yoffset, true);
 	lastX = x;
 	lastY = y;
 }
