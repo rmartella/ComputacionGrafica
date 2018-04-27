@@ -372,6 +372,11 @@ void display(void)
 		   glTranslatef(0.0, 0.0, -0.5f);
 		   glutSolidSphere(0.5, 20, 20);
 	   glPopMatrix();
+
+	   glPushMatrix();
+			glTranslatef(3.0, 0.0, -0.5f);
+			glutSolidSphere(0.5, 20, 20);
+	   glPopMatrix();
    glPopMatrix();
    
    // renderCono(20, 1.0, 2.0, true);
