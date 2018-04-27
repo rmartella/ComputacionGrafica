@@ -31,6 +31,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ilumniacionCurso", "ilumnia
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13-PrincipiosIluminacion", "13-PrincipiosIluminacion\13-PrincipiosIluminacion.vcxproj", "{5969A503-A3A9-4E02-B7AD-0C24A003F04B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14-TipoLuces", "14-TipoLuces\14-TipoLuces.vcxproj", "{8894BFE1-E4A4-4310-B6D7-E94C6FFA15A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -151,6 +153,14 @@ Global
 		{5969A503-A3A9-4E02-B7AD-0C24A003F04B}.Release|x64.Build.0 = Release|x64
 		{5969A503-A3A9-4E02-B7AD-0C24A003F04B}.Release|x86.ActiveCfg = Release|Win32
 		{5969A503-A3A9-4E02-B7AD-0C24A003F04B}.Release|x86.Build.0 = Release|Win32
+		{8894BFE1-E4A4-4310-B6D7-E94C6FFA15A1}.Debug|x64.ActiveCfg = Debug|x64
+		{8894BFE1-E4A4-4310-B6D7-E94C6FFA15A1}.Debug|x64.Build.0 = Debug|x64
+		{8894BFE1-E4A4-4310-B6D7-E94C6FFA15A1}.Debug|x86.ActiveCfg = Debug|Win32
+		{8894BFE1-E4A4-4310-B6D7-E94C6FFA15A1}.Debug|x86.Build.0 = Debug|Win32
+		{8894BFE1-E4A4-4310-B6D7-E94C6FFA15A1}.Release|x64.ActiveCfg = Release|x64
+		{8894BFE1-E4A4-4310-B6D7-E94C6FFA15A1}.Release|x64.Build.0 = Release|x64
+		{8894BFE1-E4A4-4310-B6D7-E94C6FFA15A1}.Release|x86.ActiveCfg = Release|Win32
+		{8894BFE1-E4A4-4310-B6D7-E94C6FFA15A1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
