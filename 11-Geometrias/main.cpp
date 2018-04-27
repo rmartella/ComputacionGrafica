@@ -17,7 +17,7 @@ float ** CreaMatriz(int x, int y)
 }
 
 void renderGrid(float sizecell, int numcells) {
-	glBegin(GL_LINES);
+	glBegin(GL_LINE);
 	for (int i = -numcells; i <= numcells; i++) {
 		glVertex3f((float) i * sizecell , (float) numcells * sizecell, 0.0f);
 		glVertex3f((float)i * sizecell, -(float) numcells * sizecell, 0.0f);
@@ -31,7 +31,7 @@ void renderGrid(float sizecell, int numcells) {
 void renderGrid2(float sizecell, int numcells) {
 	for (int i = -numcells; i < numcells; i++)
 		for (int j = -numcells; j < numcells; j++){
-			glBegin(GL_LINE_LOOP);
+			glBegin(GL_QUADS);
 			float rrand = rand() % 255;
 			rrand = rrand / 255;
 			glColor3f(rrand, rrand, rrand);
