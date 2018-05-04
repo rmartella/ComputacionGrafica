@@ -436,8 +436,13 @@ void display(void)
 			glTranslatef(0.0f, 0.0f, -1.5f);
 			//glDisable(GL_LIGHTING);
 			glEnable(GL_TEXTURE_2D);
-			// glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
+			glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 			texture.bind(GL_TEXTURE_2D);
+
+			// Se indica el tipo de interpolacion para ajustar la imagen que se cargo a la GPU
+			glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+			glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
 			renderPrimitiveTriangle();
 			// renderEsfera(20, 20, 0.1, false);
 			// glutSolidSphere(0.5, 20, 20);
