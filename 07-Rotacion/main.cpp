@@ -7,9 +7,9 @@ void renderPrimitiveQuad()
 {
 	glBegin(GL_QUADS);
 	glVertex3f(-0.5f, -0.5f, -3.0f);
-	glVertex3f(-0.5f, 0.5f, -3.0f);
-	glVertex3f(0.5f, 0.5f, -3.0f);
 	glVertex3f(0.5f, -0.5f, -3.0f);
+	glVertex3f(0.5f, 0.5f, -3.0f);
+	glVertex3f(-0.5f, 0.5f, -3.0f);
 	glEnd();
 }
 
@@ -18,18 +18,18 @@ void renderPrimitivePoints()
 	glPointSize(20.0f);
 	glBegin(GL_POINTS);
 	glVertex3f(-0.5f, -0.5f, -3.0f);
-	glVertex3f(-0.5f, 0.5f, -3.0f);
-	glVertex3f(0.5f, 0.5f, -3.0f);
 	glVertex3f(0.5f, -0.5f, -3.0f);
+	glVertex3f(0.5f, 0.5f, -3.0f);
+	glVertex3f(-0.5f, 0.5f, -3.0f);
 	glEnd();
 }
 
 void renderPrimitiveLineLoop() {
 	glBegin(GL_LINE_LOOP);
 	glVertex3f(-0.5f, -0.5f, -3.0f);
-	glVertex3f(-0.5f, 0.5f, -3.0f);
-	glVertex3f(0.5f, 0.5f, -3.0f);
 	glVertex3f(0.5f, -0.5f, -3.0f);
+	glVertex3f(0.5f, 0.5f, -3.0f);
+	glVertex3f(-0.5f, 0.5f, -3.0f);
 	glEnd();
 }
 

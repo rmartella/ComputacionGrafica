@@ -5,9 +5,9 @@ void renderPrimitiveQuad()
 {
 	glBegin(GL_QUADS);
 	glVertex3f(-0.5f, -0.5f, 0.0f);
-	glVertex3f(-0.5f, 0.5f, 0.0f);
-	glVertex3f(0.5f, 0.5f, 0.0f);
 	glVertex3f(0.5f, -0.5f, 0.0f);
+	glVertex3f(0.5f, 0.5f, 0.0f);
+	glVertex3f(-0.5f, 0.5f, 0.0f);
 	glEnd();
 }
 
